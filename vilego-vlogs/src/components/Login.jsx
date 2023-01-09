@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Login() {
   return (
@@ -25,11 +25,19 @@ function Login() {
         </form>
       </div>
       <div className="overlay-container">
-        <div className="left-overlay-panel"></div>
-        <div className="right-overlay-panel"></div>
+        <div className="left-overlay-panel">
+          <h3>Welcome Back!</h3>
+          <p>To keep connected with us please login with your personal info</p>
+          <button>Login</button>
+        </div>
+        <div className="right-overlay-panel">
+          <h3>Hello, Friend!</h3>
+          <p>Enter your personal details and start your journey with us</p>
+          <button>Sign Up</button>
+        </div>
       </div>
     </div>
   );
 }
 
-export default Login
+export default Login;
