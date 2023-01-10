@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-function App() {
+function Login() {
   const [signIn, setSignin] = useState(true);
 
   return (
@@ -16,12 +16,12 @@ function App() {
       >
         <form>
           <h2>Create Account</h2>
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="text" placeholder="Username" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <input type="password" placeholder="Password Confirmation" />
+          <input required type="text" placeholder="First Name" />
+          <input required type="text" placeholder="Last Name" />
+          <input required type="text" placeholder="Username" />
+          <input required type="email" placeholder="Email" />
+          <input required type="password" placeholder="Password" />
+          <input required type="password" placeholder="Password Confirmation" />
           <button>Sign Up</button>
         </form>
       </div>
@@ -33,8 +33,8 @@ function App() {
       >
         <form>
           <h2>Sign In</h2>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <input required type="email" placeholder="Email" />
+          <input required type="password" placeholder="Password" />
           <a href="#">Forgot password?</a>
           <button>Login</button>
         </form>
@@ -58,9 +58,7 @@ function App() {
             }}
           >
             <h2>Welcome Back!</h2>
-            <p>
-              To keep connected with us please login with your personal info
-            </p>
+            <p>Log in to continue where you left off.</p>
             <button className="overlay-button" onClick={() => setSignin(true)}>
               Login
             </button>
@@ -71,8 +69,11 @@ function App() {
               transform: !signIn ? "translateX(20%)" : "",
             }}
           >
-            <h2>Hello, Friend!</h2>
-            <p>Enter your personal details and start your journey with us</p>
+            <h2>Welcome Aboard!</h2>
+            <p>
+              By signing up, you'll gain access to all of the features and
+              benefits our website has to offer. Let's get started!
+            </p>
             <button className="overlay-button" onClick={() => setSignin(false)}>
               Sign Up
             </button>
@@ -83,4 +84,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
