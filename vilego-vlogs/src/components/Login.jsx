@@ -1,4 +1,5 @@
 import React from "react";
+import "./Login.css";
 
 function Login() {
   return (
@@ -20,20 +21,24 @@ function Login() {
           <h3>Sign In</h3>
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
-          <p>Forgot your password?</p>
+          <a href="#">Forgot password?</a>
           <button>Login</button>
         </form>
       </div>
       <div className="overlay-container">
-        <div className="left-overlay-panel">
-          <h3>Welcome Back!</h3>
-          <p>To keep connected with us please login with your personal info</p>
-          <button>Login</button>
-        </div>
-        <div className="right-overlay-panel">
-          <h3>Hello, Friend!</h3>
-          <p>Enter your personal details and start your journey with us</p>
-          <button>Sign Up</button>
+        <div className="overlay">
+          <div className="overlay-panel left-overlay-panel">
+            <h3>Welcome Back!</h3>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button className="overlay-button">Login</button>
+          </div>
+          <div className="overlay-panel right-overlay-panel">
+            <h3>Hello, Friend!</h3>
+            <p>Enter your personal details and start your journey with us</p>
+            <button className="overlay-button">Sign Up</button>
+          </div>
         </div>
       </div>
     </div>
