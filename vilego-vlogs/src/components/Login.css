@@ -23,7 +23,7 @@ body {
   overflow: hidden;
   width: 678px;
   max-width: 100%;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .signup-container,
@@ -74,9 +74,20 @@ body {
 .main-login-page-container input {
   background-color: #eee;
   border: none;
+  border-radius: 5px;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+}
+.main-login-page-container .signup-container .error-handle,
+.main-login-page-container .login-container .error-handle {
+  border: 1px solid #d9003d;
+}
+
+.main-login-page-container .signup-container .signup-error-message-handle,
+.main-login-page-container .login-container .login-error-message-handle {
+  margin: 5px 0 15px 0;
+  color: red;
 }
 
 .main-login-page-container button {
