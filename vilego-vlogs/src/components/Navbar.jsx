@@ -1,34 +1,19 @@
-import React, { Fragment } from 'react'
-import { NavLink } from 'react-router-dom'
 import "./Navbar.css"
+import { Link } from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <Fragment>
-    <nav className='navbar'>
-      <div className='nav-header'>
-      {/* <i classname="fa-solid fa-blog"></i> */}
-        <h1>Vilego-blogs</h1>
+        <div className="absolute inset-y-0 w-16 ...">
+        <nav className="float-left ...">
+            <ul className='hidden md:flex gap-8 p-6 uppercase bg-white/10'>
+                <li class="text-pink-600 hover:text-black hover:underline ..."><Link to='/'>Home</Link></li>
+                <li class="text-pink-600 hover:text-black hover:underline ..."><Link to='/signup'>Signup</Link></li>
+                <li class="text-pink-600 hover:text-black hover:underline ..."><Link to='/about'>About</Link></li>
+                <li class="text-pink-600 hover:text-black hover:underline ..."><Link to='/login'>Login</Link></li>
+                <li class="text-pink-600 hover:text-black hover:underline ..."><Link to='/blog'>Blog</Link></li>
+            </ul>
+            </nav>
       </div>
-      <div className='navbar-nav' >
-        <ul className='nav-ul'>
-          <li>
-        <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-        <NavLink to="/article">Blog</NavLink>
-        </li>
-        <li>
-        <NavLink to="/login">Login</NavLink>
-        </li>
-        <li>
-        <NavLink to="/signup">SignUp</NavLink>
-        </li>
-        </ul>
-      </div>
-    </nav>
-    </Fragment>
-  )
+);
 }
 
-export default Navbar

@@ -202,7 +202,7 @@ function Login() {
               {errorMessages(errors)}
             </p>
           ) : null}
-          <a href="#">Forgot password?</a>
+          <a href="#top">Forgot password?</a>
           <button type="submit">Login</button>
         </form>
       </div>
